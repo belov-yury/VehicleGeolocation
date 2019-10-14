@@ -28,7 +28,6 @@ public class VehicleServiceImpl implements VehicleService {
 
     @Override
     public List<VehicleEntity> findAll(VehicleCriteria vehicleCriteria) {
-        List<VehicleEntity> all = vehicleRepository.findAll();
         return vehicleRepository.findAll(new VehicleSpecification(vehicleCriteria));
     }
 
